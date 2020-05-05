@@ -25,7 +25,9 @@ COPY start.sh /
 
 WORKDIR /opt
 
-RUN curl -O https://dl.google.com/go/go1.12.7.linux-amd64.tar.gz && \
+ENV GOVER=1.13.10
+
+RUN curl -O https://dl.google.com/go/go${GOVER}.linux-amd64.tar.gz && \
 	tar -xzf go*.linux-amd64.tar.gz && \
 	mv go /usr/local/
 
