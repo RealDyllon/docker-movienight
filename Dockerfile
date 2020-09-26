@@ -8,11 +8,11 @@ ENV PGID=1000
 RUN apt-get -qq update && \
 	apt-get -qq upgrade && \
 	apt-get -qq install \
-		git \
-		curl \
-		gnupg2 \
-		apt-utils \
-		apt-transport-https \
+	git \
+	curl \
+	gnupg2 \
+	apt-utils \
+	apt-transport-https \
 	&& \
 	apt-get -qq autoremove && \
 	apt-get -qq clean
@@ -38,12 +38,13 @@ ENV STREAM_KEY="A1B2C3D4E5F6G7"
 ENV ADMIN_PASSWORD="A1B2C3D4E5F6G7"
 ENV ACCESS_MODE="open"
 ENV ACCESS_PIN=""
+ENV PAGE_TITLE="title"
 
 RUN apt-get -qq update && \
 	apt-get -qq upgrade && \
 	apt-get -qq install \
-		make \
-		gcc && \
+	make \
+	gcc && \
 	apt-get -qq autoremove && \
 	apt-get -qq clean
 
